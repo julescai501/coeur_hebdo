@@ -1,0 +1,651 @@
+/* ============================================
+   GOSSIP GIRL - STYLESHEET
+   Direction artistique : Style Original Gossip Girl (2000s Blog)
+   ============================================ */
+
+/* Variables CSS */
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-glow: #f4e4bc; /* Light gold/beige glow */
+    --color-blue: #4a90e2;
+    --color-orange: #ff6348;
+    --color-green: #50c878;
+    --color-pink: #ff69b4;
+    --color-lime: #32cd32;
+    --color-text-light: #e0e0e0;
+    --color-signature: #87ceeb; /* Light blue for XOXO */
+    
+    --font-sans: 'Montserrat', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Background Overlay - City Lights Bokeh Effect */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-black);
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(244, 228, 188, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 90% 70%, rgba(244, 228, 188, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 10% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+    animation: bokehMove 20s ease-in-out infinite;
+}
+
+@keyframes bokehMove {
+    0%, 100% {
+        background-position: 0% 0%, 100% 20%, 40% 80%, 90% 70%, 10% 30%;
+    }
+    50% {
+        background-position: 10% 10%, 90% 30%, 50% 70%, 80% 60%, 20% 40%;
+    }
+}
+
+/* ============================================
+   HEADER / TITLE
+   ============================================ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+.header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-transform: lowercase;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-glow);
+    text-shadow: 
+        0 0 10px rgba(244, 228, 188, 0.5),
+        0 0 20px rgba(244, 228, 188, 0.3),
+        0 0 30px rgba(244, 228, 188, 0.2);
+    margin-bottom: var(--spacing-xs);
+}
+
+.logo .tagline {
+    display: none; /* Hidden, will be shown elsewhere */
+}
+
+.nav {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.nav-link {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-glow);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    margin-top: 120px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 3px;
+    color: var(--color-glow);
+    text-shadow: 0 0 20px rgba(244, 228, 188, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-light);
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.cta-button {
+    background: transparent;
+    color: var(--color-glow);
+    border: 2px solid var(--color-glow);
+    padding: 12px 35px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-sans);
+    box-shadow: 0 0 15px rgba(244, 228, 188, 0.3);
+}
+
+.cta-button:hover {
+    background: var(--color-glow);
+    color: var(--color-black);
+    box-shadow: 0 0 25px rgba(244, 228, 188, 0.6);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-glow);
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    opacity: 0.7;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* ============================================
+   SECTION TITLES
+   ============================================ */
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-glow);
+    letter-spacing: 5px;
+    text-transform: lowercase;
+    text-shadow: 0 0 15px rgba(244, 228, 188, 0.4);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+/* ============================================
+   GOSSIP SECTION - POLAROID STYLE
+   ============================================ */
+.gossip-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-black);
+}
+
+.gossip-characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.gossip-character-box {
+    background: var(--color-white);
+    border-radius: 4px;
+    padding: var(--spacing-md);
+    padding-bottom: 60px;
+    box-shadow: 
+        0 8px 16px rgba(0, 0, 0, 0.4),
+        0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    /* Polaroid effect - white space at bottom */
+    border: 8px solid var(--color-white);
+}
+
+.gossip-character-box:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 
+        0 12px 24px rgba(0, 0, 0, 0.5),
+        0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.character-gossip-title {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-black);
+}
+
+.gossip-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.gossip-card {
+    background: var(--color-white);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Image/Video Container in Gossip Cards */
+.gossip-media {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: var(--color-black);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.gossip-media img,
+.gossip-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gossip-media::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
+.gossip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.gossip-date {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gossip-badge {
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--color-orange);
+    color: var(--color-white);
+    display: inline-block;
+}
+
+.gossip-badge.exclusif {
+    background: var(--color-blue);
+}
+
+.gossip-badge.scandale {
+    background: var(--color-pink);
+}
+
+.gossip-badge.hot {
+    background: var(--color-orange);
+}
+
+.gossip-title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+
+.gossip-content {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+    padding: 0 var(--spacing-sm);
+    max-height: 120px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.gossip-content.expanded {
+    max-height: none;
+}
+
+.gossip-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.gossip-author {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--color-signature);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.read-more {
+    background: transparent;
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+    padding: 6px 15px;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-sans);
+}
+
+.read-more:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+/* ============================================
+   CHARACTERS SECTION
+   ============================================ */
+.characters-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-black);
+}
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.character-card {
+    background: transparent;
+    border-radius: 50%;
+    padding: var(--spacing-sm);
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid var(--color-glow);
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(244, 228, 188, 0.4);
+}
+
+.character-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.character-initial {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.character-name {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-glow);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: var(--spacing-xs);
+}
+
+.character-description {
+    display: none; /* Hidden on circular cards */
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+.about-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-light);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.about-text:last-child {
+    margin-bottom: 0;
+    font-family: var(--font-sans);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-signature);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    border-top: 1px solid rgba(244, 228, 188, 0.2);
+}
+
+.footer p {
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    letter-spacing: 1px;
+}
+
+.footer-tagline {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--color-signature);
+    letter-spacing: 4px;
+    margin-top: var(--spacing-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .gossip-characters-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .characters-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    .character-card {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .character-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .character-initial {
+        font-size: 2rem;
+    }
+    
+    .gossip-media {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .gossip-character-box {
+        padding: var(--spacing-sm);
+    }
+    
+    .gossip-media {
+        height: 200px;
+    }
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

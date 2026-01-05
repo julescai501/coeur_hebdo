@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gossip Girl - XOXO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gossip Girl</h1>
+                <p class="tagline">XOXO</p>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">Accueil</a>
+                <a href="#gossip" class="nav-link">Gossip</a>
+                <a href="#characters" class="nav-link">Personnages</a>
+                <a href="#about" class="nav-link">À propos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Bienvenue sur le Upper East Side Centralien</h2>
+            <p class="hero-subtitle">Vous savez qui je suis. Les secrets ne restent jamais secrets longtemps.</p>
+            <button class="cta-button" onclick="scrollToSection('gossip')">Découvrir les secrets</button>
+        </div>
+        <div class="scroll-indicator">
+            <span>↓</span>
+        </div>
+    </section>
+
+    <!-- Gossip Section -->
+    <section id="gossip" class="gossip-section">
+        <div class="container">
+            <h2 class="section-title">Les Derniers Gossips</h2>
+            <div class="gossip-characters-grid">
+                <!-- Taz -->
+                <div class="gossip-character-box">
+                    <h3 class="character-gossip-title">Taz</h3>
+                    <div class="gossip-items">
+                        <article class="gossip-card">
+                            <div class="gossip-media">
+                                <img src="Taz.JPG" alt="Taz & Lexrhow">
+                            </div>
+                            <div class="gossip-header">
+                                <span class="gossip-date">Il y a 2 jours</span>
+                                <span class="gossip-badge hot">Hot</span>
+                            </div>
+                            <h4 class="gossip-title">Taz & Lexrhow : l'officialisation qui fait trembler les DM</h4>
+                            <p class="gossip-content">Il aura suffi d'hier pour que le doute s'évapore : Taz n'est plus un cœur à prendre. Aperçu main dans la main avec Lexrhow, le couple est désormais officiel. Simple flirt ou romance destinée à faire jaser longtemps ? Une chose est sûre : les regards sont braqués… et la timeline aussi.</p>
+                            <div class="gossip-footer">
+                                <span class="gossip-author">XOXO GOSSIP GIRL</span>
+                                <button class="read-more">Lire plus</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Mawi -->
+                <div class="gossip-character-box">
+                    <h3 class="character-gossip-title">Mawi</h3>
+                    <div class="gossip-items">
+                        <article class="gossip-card">
+                            <div class="gossip-media">
+                                 <img src="mawi.PNG" alt="Mawi romance"> 
+                                <!-- <video src="videos/mawi-gossip.mp4" controls></video> -->
+                            </div>
+                            <div class="gossip-header">
+                                <span class="gossip-date">Il y a 2 jours</span>
+                                <span class="gossip-badge exclusif">Exclusif</span>
+                            </div>
+                            <h4 class="gossip-title">Mawi débarque à Paris</h4>
+                            <p class="gossip-content">Mawi emménage dans la capitale française. Romantique ? Peut-être. Mais selon les mauvaises langues, ses futures conquêtes risquent surtout d'être nez à nez avec les toilettes. Paris, ville de l'amour… et parfois des lendemains difficiles.</p>
+                            <div class="gossip-footer">
+                                <span class="gossip-author">XOXO GOSSIP GIRL</span>
+                                <button class="read-more">Lire plus</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- DFK -->
+                <div class="gossip-character-box">
+                    <h3 class="character-gossip-title">DFK</h3>
+                    <div class="gossip-items">
+                        <article class="gossip-card">
+                            <div class="gossip-media">
+                                <video src="DFK.MOV" controls></video>
+                            </div>
+                            <div class="gossip-header">
+                                <span class="gossip-date">Il y a 5 jours</span>
+                                <span class="gossip-badge scandale">Scandale</span>
+                            </div>
+                            <h4 class="gossip-title">DFK et le retour des vieux démons</h4>
+                            <p class="gossip-content">Attention terrain glissant… DFK retombe dans ses anciens travers avec un ami de Ginnette, déjà "chopé" il y a quelques années. Hasard ou destin qui insiste ? Une nouvelle histoire d'amour qui débute ou un simple remake dont on connaît déjà la fin ? Spoiler alert : ça sent le drama.</p>
+                            <div class="gossip-footer">
+                                <span class="gossip-author">XOXO GOSSIP GIRL</span>
+                                <button class="read-more">Lire plus</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Rayleigh -->
+                <div class="gossip-character-box">
+                    <h3 class="character-gossip-title">Rayleigh</h3>
+                    <div class="gossip-items">
+                        <article class="gossip-card">
+                            <div class="gossip-media">
+                                <video src="Rayleigh.MOV" controls></video>
+                            </div>
+                            <div class="gossip-header">
+                                <span class="gossip-date">Il y a 4 jours</span>
+                                <span class="gossip-badge hot">Hot</span>
+                            </div>
+                            <h4 class="gossip-title">L'homme de ménage</h4>
+                            <p class="gossip-content">Rayleigh a été spotted balai à la main, en plein ménage, mais ne vous y trompez pas : ce n’est pas de la corvée, c’est une déclaration d’allégeance. Car évidemment, il était totalement d’accord avec Larhow — et après tout, elle a toujours raison.
+                                Simple sens du devoir ou stratégie brillante pour rester dans les bonnes grâces de la reine de l’Upper East Side ? Une chose est sûre : dans ce royaume, mieux vaut passer le chiffon que contredire la couronne.
+                                
+                                Vous savez ce qu’on dit… happy queen, quiet kingdom.</p>
+                            <div class="gossip-footer">
+                                <span class="gossip-author">XOXO GOSSIP GIRL</span>
+                                <button class="read-more">Lire plus</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Larhow -->
+                <div class="gossip-character-box">
+                    <h3 class="character-gossip-title">Larhow</h3>
+                    <div class="gossip-items">
+                        <article class="gossip-card">
+                            <div class="gossip-media">
+                                 <img src="larhow.PNG" alt="Larhow style">
+                                <!-- <video src="videos/larhow-gossip.mp4" controls></video> -->
+                            </div>
+                            <div class="gossip-header">
+                                <span class="gossip-date">Il y a 5 jours</span>
+                                <span class="gossip-badge exclusif">Exclusif</span>
+                            </div>
+                            <h4 class="gossip-title">Personnalité unique</h4>
+                            <p class="gossip-content">Larhow, reine incontestée de l’Upper East Side, a frappé fort en orchestrant la plus grande soirée du Nouvel An de New York. Luxe, invités triés sur le volet, Kalash de vodkas… tout y était pour entrer dans la légende. Mais plot twist, mes chipies : la queen a quitté sa propre soirée plus tôt que prévu. Chute de talons ? Gros vomito ? Rencontre imprévue dans un couloir sombre ?
+                                Les murs ont des oreilles, les coupes étaient pleines… et moi, je sais que vous avez déjà votre petite idée                                
+                                Vous connaissez la règle : si elle est partie tôt, ce n’est jamais pour rien.</p>
+                            <div class="gossip-footer">
+                                <span class="gossip-author">XOXO GOSSIP GIRL</span>
+                                <button class="read-more">Lire plus</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Kiry -->
+                <div class="gossip-character-box">
+                    <h3 class="character-gossip-title">Kiry</h3>
+                    <div class="gossip-items">
+                        <article class="gossip-card">
+                            <div class="gossip-media">
+                                <video src="Kiry.mov" controls></video>
+                            </div>
+                            <div class="gossip-header">
+                                <span class="gossip-date">Il y a 5 jours</span>
+                                <span class="gossip-badge scandale">Scandale</span>
+                            </div>
+                            <h4 class="gossip-title">Kiry : Upper Arc Side, Lower Dignity</h4>
+                            <p class="gossip-content">Soirée trop arrosée, ego trop confiant : Kiry a offert une véritable Disaster Class en terminant… dans son propre vomi. Upper Arc Side, paillettes et décadence : parfois la chute est littérale. On espère juste que quelqu'un a pris ses clés.</p>
+                            <div class="gossip-footer">
+                                <span class="gossip-author">XOXO GOSSIP GIRL</span>
+                                <button class="read-more">Lire plus</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Pecou -->
+                <div class="gossip-character-box">
+                    <h3 class="character-gossip-title">Pecou</h3>
+                    <div class="gossip-items">
+                        <article class="gossip-card">
+                            <div class="gossip-media">
+                                <img src="pecou.png" alt="Pecou originalité"> 
+                                <!-- <video src="videos/pecou-gossip.mp4" controls></video> -->
+                            </div>
+                            <div class="gossip-header">
+                                <span class="gossip-date">Il y a 5 jours</span>
+                                <span class="gossip-badge hot">Hot</span>
+                            </div>
+                            <h4 class="gossip-title">Pecou : sobriété annoncée, suspense maintenu</h4>
+                            <p class="gossip-content">Après une soirée plus que mouvementée sous l'influence de la Guinness, Pecou annonce arrêter l'alcool jusqu'à août. Mais pas de panique, chers lecteurs : son compte Hinge promet de nous tenir en haleine… jusqu'au retour tant redouté du monstre Pesombre.</p>
+                            <div class="gossip-footer">
+                                <span class="gossip-author">XOXO GOSSIP GIRL</span>
+                                <button class="read-more">Lire plus</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Pekka -->
+                <div class="gossip-character-box">
+                    <h3 class="character-gossip-title">Pekka</h3>
+                    <div class="gossip-items">
+                        <article class="gossip-card">
+                            <div class="gossip-media">
+                                <video src="Pekka.MOV" controls></video>
+                            </div>
+                            <div class="gossip-header">
+                                <span class="gossip-date">Il y a 2 jours</span>
+                                <span class="gossip-badge exclusif">Exclusif</span>
+                            </div>
+                            <h4 class="gossip-title">Alerte Pekka 🚨</h4>
+                            <p class="gossip-content">Scandale en vue : Pekka aperçu avec une autre femme que sa dulcinée, porté par elle façon koala. Mais attention, plot twist : ça ne l'a pas empêché de présenter la mystérieuse Bérénice à la Catoche. Simple amie très musclée ou nouvelle page sentimentale ? Le suspense est total.</p>
+                            <div class="gossip-footer">
+                                <span class="gossip-author">XOXO GOSSIP GIRL</span>
+                                <button class="read-more">Lire plus</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Zyzz -->
+                <div class="gossip-character-box">
+                    <h3 class="character-gossip-title">Zyzz</h3>
+                    <div class="gossip-items">
+                        <article class="gossip-card">
+                            <div class="gossip-media">
+                                <img src="Zyzz.jpeg" alt="Zyzz dynamisme"> 
+                                <!-- <video src="videos/zyzz-gossip.mp4" controls></video> -->
+                            </div>
+                            <div class="gossip-header">
+                                <span class="gossip-date">Il y a 5 jours</span>
+                                <span class="gossip-badge scandale">Scandale</span>
+                            </div>
+                            <h4 class="gossip-title">Zyzz présente Madame au T56</h4>
+                            <p class="gossip-content">Événement majeur : Zyzz a enfin ramené sa compagne au sein du groupe diabolique du T56. Entrée réussie, bonne humeur validée, sourires distribués. Survivra-t-elle à cette société fermée ou en deviendra-t-elle la reine ? Les paris sont ouverts.</p>
+                            <div class="gossip-footer">
+                                <span class="gossip-author">XOXO GOSSIP GIRL</span>
+                                <button class="read-more">Lire plus</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Tela -->
+                <div class="gossip-character-box">
+                    <h3 class="character-gossip-title">Tela</h3>
+                    <div class="gossip-items">
+                        <article class="gossip-card">
+                            <div class="gossip-media">
+                                <video src="Tela.MOV" controls></video>
+                            </div>
+                            <div class="gossip-header">
+                                <span class="gossip-date">Il y a 5 jours</span>
+                                <span class="gossip-badge hot">Hot</span>
+                            </div>
+                            <h4 class="gossip-title">Tela & Martin Matin : guitare, snaps et regrets</h4>
+                            <p class="gossip-content">Officiellement, Martin Matin n'était invité chez Tela que pour un concert de guitare. Officieusement ? Des snaps lugubres envoyés aux copains, une ambiance électrique, et cette phrase lâchée comme un aveu : « On s'est pas assez embrassé. » Chérie, quand ça commence comme ça, ça ne finit jamais simplement.</p>
+                            <div class="gossip-footer">
+                                <span class="gossip-author">XOXO GOSSIP GIRL</span>
+                                <button class="read-more">Lire plus</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- MT -->
+                <div class="gossip-character-box">
+                    <h3 class="character-gossip-title">MT</h3>
+                    <div class="gossip-items">
+                        <article class="gossip-card">
+                            <div class="gossip-media">
+                                <video src="MT.MOV" controls></video>
+                            </div>
+                            <div class="gossip-header">
+                                <span class="gossip-date">Il y a 5 jours</span>
+                                <span class="gossip-badge exclusif">Exclusif</span>
+                            </div>
+                            <h4 class="gossip-title">MT, chevalier de la diversité</h4>
+                            <p class="gossip-content">Alors que Tela semblait prête à replonger dans les griffes de Paul LeChat, MT est intervenu tel un héros masqué. Défenseur de la diversité, stratège de l'ombre, il aurait redirigé Tela… vers Martin Matin, son ami. Coup de pouce sincère ou manœuvre bien calculée ? La morale n'a jamais été aussi sexy.</p>
+                            <div class="gossip-footer">
+                                <span class="gossip-author">XOXO GOSSIP GIRL</span>
+                                <button class="read-more">Lire plus</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="characters-section">
+        <div class="container">
+            <h2 class="section-title">Les Personnages</h2>
+            <div class="characters-grid">
+                <div class="character-card">
+                    <div class="character-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span class="character-initial">T</span>
+                    </div>
+                    <h3 class="character-name">Taz</h3>
+                    <p class="character-description">Le personnage mystérieux</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <span class="character-initial">M</span>
+                    </div>
+                    <h3 class="character-name">Mawi</h3>
+                    <p class="character-description">Le personnage charismatique</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <span class="character-initial">D</span>
+                    </div>
+                    <h3 class="character-name">DFK</h3>
+                    <p class="character-description">Le personnage énigmatique</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <span class="character-initial">R</span>
+                    </div>
+                    <h3 class="character-name">Rayleigh</h3>
+                    <p class="character-description">Le personnage élégant</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <span class="character-initial">L</span>
+                    </div>
+                    <h3 class="character-name">Larhow</h3>
+                    <p class="character-description">Le personnage unique</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                        <span class="character-initial">K</span>
+                    </div>
+                    <h3 class="character-name">Kiry</h3>
+                    <p class="character-description">Le personnage intriguant</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <span class="character-initial">P</span>
+                    </div>
+                    <h3 class="character-name">Pecou</h3>
+                    <p class="character-description">Le personnage original</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                        <span class="character-initial">P</span>
+                    </div>
+                    <h3 class="character-name">Pekka</h3>
+                    <p class="character-description">Le personnage captivant</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                        <span class="character-initial">Z</span>
+                    </div>
+                    <h3 class="character-name">Zyzz</h3>
+                    <p class="character-description">Le personnage dynamique</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);">
+                        <span class="character-initial">T</span>
+                    </div>
+                    <h3 class="character-name">Tela</h3>
+                    <p class="character-description">Le personnage séduisant</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);">
+                        <span class="character-initial">M</span>
+                    </div>
+                    <h3 class="character-name">MT</h3>
+                    <p class="character-description">Le personnage remarquable</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">À propos</h2>
+                <p class="about-text">
+                    Bienvenue dans le monde exclusif du Upper East Side. Ici, les secrets ne restent jamais secrets longtemps. 
+                    Gossip Girl vous tient au courant de tout ce qui se passe dans les cercles les plus fermés de Manhattan.
+                </p>
+                <p class="about-text">
+                    Vous savez qui je suis. XOXO, Gossip Girl.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Gossip Girl. Tous les droits réservés.</p>
+            <p class="footer-tagline">XOXO, Gossip Girl</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
